@@ -1,0 +1,25 @@
+This is the second homework
+
+Total: 100 points: min(100, score)
+
+For this homework you will design and train a convolutional network capable of counting the
+digits in an image. You will get a dataset of 5000 training images and 1000 testing images, each
+of size 100x100. These images are formed by placing N (1 to 5) digits from the MNIST dataset
+(28x28 digits) onto a noisy background. The goal is to predict the number of digits in the image.
+
+You must implement two methods for this task:
+
+Method 1: [50 points]: Without training on the counting dataset.
+Just use a model trained to classify images on MNIST dataset. Use this model in a sliding
+window approach or by converting it to a fully convolutional network to predict maps
+representing the probability of digits being present at that location. Using this maps, with no
+additional training estimate the number of digits.
+
+Method 2: [80 points]: Train a new convolutional network to predict the number of digits.
+Investigate the usefulness transfer learning by reusing the first part of the classification MNIST
+network. Train a model using parameters from the pretrained classification model and a model
+with all the parameters randomly initialized.
+
+Your task is to investigate the best network architecture for this tasks, the appropriate loss
+(mean square error or cross-entropy), the effect of transfer learning.
+
